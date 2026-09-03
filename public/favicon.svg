@@ -1,4 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0f172a"/>
-  <path d="m27 20-12 12 12 12M37 20l12 12-12 12M35 14 29 50" fill="none" stroke="#5eead4" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <text x="32" y="49" fill="#0f766e" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-style="italic" font-weight="700" letter-spacing="-6" text-anchor="middle">AG</text>
 </svg>

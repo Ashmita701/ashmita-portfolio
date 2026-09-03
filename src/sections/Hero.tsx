@@ -25,7 +25,7 @@ function HeroContent() {
             {personal.name}
           </m.h1>
           <m.p variants={reveal} initial="hidden" animate="visible" transition={{ delay: shouldReduceMotion ? 0 : 0.16 }} className="mt-7 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
-            {professionalSummary.split('Experienced')[0].trim()}
+            {professionalSummary}
           </m.p>
           <m.div variants={reveal} initial="hidden" animate="visible" transition={{ delay: shouldReduceMotion ? 0 : 0.24 }} className="mt-9 flex flex-wrap gap-4">
             <m.a {...buttonMotion(shouldReduceMotion)} href="#projects" className="group inline-flex items-center gap-2 rounded-full bg-teal-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-600/20 outline-none transition hover:bg-teal-700 focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-4 focus-visible:ring-offset-slate-50 dark:bg-teal-500 dark:text-slate-950 dark:hover:bg-teal-400 dark:focus-visible:ring-offset-slate-950">

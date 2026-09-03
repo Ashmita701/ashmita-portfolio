@@ -56,10 +56,10 @@ export function Projects() {
   return (
     <section id="projects" className="scroll-mt-20 border-b border-slate-200/80 bg-white dark:border-slate-800/80 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 lg:py-28">
-        <div className="mb-14 max-w-2xl">
-          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-teal-700 dark:text-teal-400">Selected work</p>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">Systems made to be explored.</h2>
-          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300">A selection of application projects spanning web, backend, data, and mobile development.</p>
+        <div className="mb-14 max-w-3xl border-l-2 border-teal-500 pl-5 sm:pl-6">
+          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-teal-700 dark:text-teal-400">Projects</p>
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">Products shaped from idea to experience.</h2>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">A closer look at the platforms, workflows, and mobile experiences I have helped design, build, and improve across the stack.</p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -74,13 +74,17 @@ export function Projects() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: shouldReduceMotion ? 0 : 0.5, delay: shouldReduceMotion ? 0 : index * 0.06 }}
-                className={`group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/70 transition-all duration-300 hover:-translate-y-1 hover:border-teal-300 hover:shadow-xl hover:shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-teal-800 dark:hover:shadow-black/20 ${index === 0 ? 'lg:col-span-2' : ''}`}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/70 transition-all duration-300 hover:-translate-y-1 hover:border-teal-300 hover:bg-white hover:shadow-xl hover:shadow-teal-900/10 dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-teal-800 dark:hover:bg-slate-900 dark:hover:shadow-black/20"
               >
                 <ProjectVisualPanel project={project} />
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.18em] text-teal-700 dark:text-teal-400">{project.visual}</p>
+                      <div className="mb-2 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-teal-700 dark:text-teal-400">
+                        <span className="text-slate-400 dark:text-slate-500">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="size-1 rounded-full bg-teal-500" aria-hidden="true" />
+                        <span>{project.visual}</span>
+                      </div>
                       <h3 className="text-xl font-semibold text-slate-950 dark:text-white">{project.name}</h3>
                     </div>
                     <ProjectIcon size={20} className="shrink-0 text-slate-300 transition-colors group-hover:text-teal-500 dark:text-slate-700" aria-hidden="true" />

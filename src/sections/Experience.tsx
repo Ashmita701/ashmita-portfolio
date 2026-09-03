@@ -9,16 +9,14 @@ export function Experience() {
   return (
     <section id="experience" className="scroll-mt-20 border-b border-slate-200/80 bg-slate-50 dark:border-slate-800/80 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 lg:py-28">
-        <div className="mb-14 max-w-2xl">
+        <div className="mb-14 max-w-3xl border-l-2 border-teal-500 pl-5 sm:pl-6">
           <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-teal-700 dark:text-teal-400">
             Experience
           </p>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
-            A steady practice of building useful systems.
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">
+            Turning complex ideas into dependable products.
           </h2>
-          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300">
-            A timeline of roles focused on scalable applications, secure services, and thoughtful collaboration.
-          </p>
+
         </div>
 
         <div className="relative ml-2 border-l border-slate-300 pl-8 dark:border-slate-700 md:ml-5 md:pl-12">
@@ -31,7 +29,7 @@ export function Experience() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: shouldReduceMotion ? 0 : 0.55, delay: shouldReduceMotion ? 0 : index * 0.08 }}
-                className={`relative rounded-2xl border p-6 transition-colors md:p-8 ${entry.isCurrent ? 'border-teal-300 bg-white shadow-xl shadow-teal-950/5 dark:border-teal-800 dark:bg-slate-900' : 'border-slate-200 bg-white/60 dark:border-slate-800 dark:bg-slate-900/40'}`}
+                className="group relative rounded-2xl border border-slate-200 bg-white/60 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-teal-300 hover:bg-white hover:shadow-xl hover:shadow-teal-950/5 dark:border-slate-800 dark:bg-slate-900/40 dark:hover:border-teal-800 dark:hover:bg-slate-900 dark:hover:shadow-black/20 md:p-8"
               >
                 <span
                   className={`absolute -left-[2.65rem] top-8 flex size-5 items-center justify-center rounded-full border-4 border-slate-50 md:-left-[3.15rem] dark:border-slate-950 ${entry.isCurrent ? 'bg-teal-500' : 'bg-slate-300 dark:bg-slate-600'}`}
@@ -49,14 +47,14 @@ export function Experience() {
                         </span>
                       )}
                     </div>
-                    <p className={`mt-2 font-medium ${entry.isCurrent ? 'text-teal-700 dark:text-teal-300' : 'text-slate-600 dark:text-slate-300'}`}>
+                    <p className="mt-2 font-medium text-slate-600 transition-colors group-hover:text-teal-700 dark:text-slate-300 dark:group-hover:text-teal-300">
                       {entry.title}
                     </p>
                     {entry.location && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{entry.location}</p>}
                   </div>
                   <time className="shrink-0 font-mono text-xs text-slate-500 dark:text-slate-400">{entry.date}</time>
                 </div>
-                <ul className="mt-7 grid gap-3 text-sm leading-6 text-slate-600 sm:grid-cols-3 dark:text-slate-400">
+                <ul className="mt-7 flex flex-col gap-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
                   {entry.responsibilities.map((responsibility) => (
                     <li key={responsibility} className="flex gap-2">
                       <Check size={16} className="mt-1 shrink-0 text-teal-500" aria-hidden="true" />

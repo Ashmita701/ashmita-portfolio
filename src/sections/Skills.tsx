@@ -18,10 +18,10 @@ export function Skills() {
   return (
     <section id="skills" className="scroll-mt-20 border-b border-slate-200/80 bg-slate-50 dark:border-slate-800/80 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 lg:py-28">
-        <div className="mb-14 max-w-2xl">
-          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-teal-700 dark:text-teal-400">Toolkit</p>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">A practical full stack toolkit.</h2>
-          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300">Technologies organized by where they support the product development process.</p>
+        <div className="mb-14 max-w-3xl border-l-2 border-teal-500 pl-5 sm:pl-6">
+          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-teal-700 dark:text-teal-400">Skills</p>
+          <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl dark:text-white">Technology with purpose, from screen to system.</h2>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">The languages, frameworks, and tools I bring together to shape useful interfaces, dependable services, and maintainable products.</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -49,6 +49,7 @@ export function Skills() {
                 <ul className="mt-6 flex flex-wrap gap-2" aria-label={`${group.category} skills`}>
                   {group.skills.map((skill) => (
                     <li key={skill} className="rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1.5 font-mono text-xs text-slate-600 transition-colors group-hover:border-slate-300 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-300 dark:group-hover:border-slate-600">
+                      {portfolioData.skillIconUrls[skill] && <img src={portfolioData.skillIconUrls[skill]} alt="" loading="lazy" className="mr-1.5 inline-block size-4 rounded-sm bg-white p-0.5 object-contain align-middle dark:bg-slate-100" />}
                       {skill}
                     </li>
                   ))}

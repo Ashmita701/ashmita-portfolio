@@ -1,7 +1,6 @@
 import { LazyMotion, domAnimation } from 'framer-motion'
 import { Footer } from './components/Footer'
 import { Navbar } from './components/Navbar'
-import { TechnologyShowcase } from './components/TechnologyShowcase'
 import { About } from './sections/About'
 import { Certification } from './sections/Certification'
 import { Contact } from './sections/Contact'
@@ -17,7 +16,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <TechnologyShowcase />
+        {/* <TechnologyShowcase /> */}
         <About />
         <Experience />
         <Projects />
